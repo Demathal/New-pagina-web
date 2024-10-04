@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario CFT</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        .container {
+            margin: 5% auto;
+            width: 650px;
+        }
+        h1, h6 {
+            text-align: center;
+        }
+        h6 {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<script>
+    function selectCareer(career) {
+        document.getElementById('dropdownMenuButton').textContent = career;
+        document.getElementById('selectedCareer').value = career;
+    }
+    </script>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img src="assets/img/logo_cft (1).jpg" alt="Logo" width="60" height="60">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Admisión</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Carreras</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Area Industrial</a>
+                        <a class="dropdown-item" href="#">TNS en Informatica y Aplicaciones Distribuida</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Contáctanos</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" style="margin-left: auto;">
+                <input class="form-control mr-sm-2" type="search" placeholder="Buscar la Carrera" aria-label="search">
+                <button class="btn btn-outline-success my-2 my-sm0" type="submit">Buscar</button>
+            </form>
+        <div>
+    </nav>
+    <div align="center">
+        <img src="assets/img/portada.jpeg" width="2000px" height="400px" alt="Portada">
+        <h6>Si tienes dudas. Usa nuestro formulario de contacto para realizar las preguntas que necesitas. Recuerda que estamos para ayudarte y ofrecerte una educacion de calidad<h6>
+    </div>
+
+    <div class="container">
+        <h1>Formulario</h1>
+        <form> 
+           <div class="form-group">
+            <input type="text" class="form-control" id="name" placeholder="Nombre" required aria-label="Nombre">
+           </div>
+           <div class="form-group">
+            <input type="text" class="form-control" id="surname" placeholder="Apellido" required aria-label="Apellido">
+           </div>
+           <div class="form-group">
+            <input type="text" class="form-control" id="phone" placeholder="Teléfono" required aria-label="Teléfono">
+           </div>
+           <div class="form-group">
+            <input type="tel" class="form-control" id="phone" placeholder="Carrera" required aria-label="Carrera">
+            <div class="dropdown">
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#" onclick="selectCareer ('Carrera 1')">Carrera 1</a>
+                    <a class="dropdown-item" href="#" onclick="selectCareer ('Carrera 2')">Carrera 2</a>
+           </div>
+        </div>
+        <input type="hidden" id="SelectedCareer" Name="carrer">
+    </div>
+    <div class="form-group">
+        <input type="number" class="form-control" id="age" placeholder="Edad" required aria-label="Edad" min="1" max="120">
+    </div>
+    <div class="form-group">
+        <textarea class="form-control" id="message" placeholder="Mensaje" required aria-label="Mensaje"></textarea>
+    </div>
+
+    <div style="text-align: center; margin-top: 20px;">
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar</button>
+    </div>
+  </form>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</html>
